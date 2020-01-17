@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Same height divs with CSS Grid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+        .grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr);
+  grid-template-rows: repeat(5, [row] auto);
+  grid-column-gap: 1em;
+  grid-row-gap: 15px;
+}
+
+.grid__item {
+  background: #eee;
+  text-transform: uppercase;
+  padding: 1em;
+  font-size: 14px;
+}
+
+.grid__item_item1 {
+  grid-column: col / span 4;
+  grid-row: row;
+}
+
+.grid__item_item2 {
+  grid-column: col 5 / span 4;
+  grid-row: row;
+}
+
+.grid__item_item3 {
+  grid-column: col 9 / span 4;
+  grid-row: row;
+}
+
+.grid__item_item4 {
+  grid-column: col / span 8;
+  grid-row: row 2;
+}
+
+.grid__item_item5 {
+  grid-column: col 9 / span 4;
+  grid-row: row 2;
+}
+
+.grid__item_item6 {
+  grid-column: col / span 3;
+  grid-row: row 3;
+}
+
+.grid__item_item7 {
+  grid-column: col 4 / span 3;
+  grid-row: row 3;
+}
+
+.grid__item_item8 {
+  grid-column: col 7 / span 3;
+  grid-row: row 3;
+}
+
+.grid__item_item9 {
+  grid-column: col 10 / span 3;
+  grid-row: row 3;
+}
+
+.grid__item_item10 {
+  grid-column: col / span 6;
+  grid-row: row 4;
+}
+
+.grid__item_item11 {
+  grid-column: col 7 / span 6;
+  grid-row: row 4;
+}
+
+.grid__item_item12 {
+  grid-column: col / span 12;
+  grid-row: row 5;
+}
+
+.grid__item_item-v1 {
+  grid-column: col / span 4;
+  grid-row: row / span 2;
+}
+
+.grid__item_item-v2 {
+  grid-column: col 5 / span 4;
+  grid-row: row / span 3;
+}
+
+.grid__item_item-v3 {
+  grid-column: col 9 / span 4;
+  grid-row: row;
+}
+
+.grid__item_item-v4 {
+  grid-column: col 9 / span 4;
+  grid-row: row 2;
+}
+
+.grid__item_item-v5 {
+  grid-column: col / span 3;
+  grid-row: row 3;
+}
+
+.grid__item_item-v6 {
+  grid-column: col 4;
+  grid-row: row 3;
+}
+
+.grid__item_item-v7 {
+  grid-column: col 9;
+  grid-row: row 3;
+}
+
+.grid__item_item-v8 {
+  grid-column: col 10 / span 3;
+  grid-row: row 3;
+}
+
+.grid__item_item-v9 {
+  grid-column: col / span 6;
+  grid-row: row 4;
+}
+
+.grid__item_item-v10 {
+  grid-column: col 7 / span 3;
+  grid-row: row 4;
+}
+
+.grid__item_item-v11 {
+  grid-column: col 10 / span 3;
+  grid-row: row 4;
+}
+
+.grid__item_item-v12 {
+  grid-column: col / span 12;
+  grid-row: row 5;
+}
+        </style>
+    </head>
+    <body>
+        <h2>
+            Typical 12 column grid based on CSS Grid Layout
+          </h2>
+          <div class="grid">
+            <div class="grid__item grid__item_item1">four columns</div>
+            <div class="grid__item grid__item_item2">four columns</div>
+            <div class="grid__item grid__item_item3">four columns</div>
+            <div class="grid__item grid__item_item4">eight columns</div>
+            <div class="grid__item grid__item_item5">four columns</div>
+            <div class="grid__item grid__item_item6">three columns</div>
+            <div class="grid__item grid__item_item7">three columns</div>
+            <div class="grid__item grid__item_item8">three columns</div>
+            <div class="grid__item grid__item_item9">three columns</div>
+            <div class="grid__item grid__item_item10">six columns</div>
+            <div class="grid__item grid__item_item11">six columns</div>
+            <div class="grid__item grid__item_item12">twelve collumns</div>
+          </div>
+          
+          <h2>
+            Not a typical 12 column grid based on CSS Grid Layout
+          </h2>
+          
+          <div class="grid">
+            <div class="grid__item grid__item_item-v1">four columns two rows</div>
+            <div class="grid__item grid__item_item-v2">four columns three rows</div>
+            <div class="grid__item grid__item_item-v3">four columns</div>
+            <div class="grid__item grid__item_item-v4">four columns</div>
+            <div class="grid__item grid__item_item-v5">three columns</div>
+            <div class="grid__item grid__item_item-v6">one</div>
+            <div class="grid__item grid__item_item-v7">one</div>
+            <div class="grid__item grid__item_item-v8">three columns</div>
+            <div class="grid__item grid__item_item-v9">six columns</div>
+            <div class="grid__item grid__item_item-v10">three columns</div>
+            <div class="grid__item grid__item_item-v11">three columns</div>
+            <div class="grid__item grid__item_item-v12">twelve collumns</div>
+          </div>
+    </body>
+</html>
