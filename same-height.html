@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Same height divs with CSS Grid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+        * {
+            box-sizing: border-box;  
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            display: grid; 
+            grid-template-columns: repeat(3, 2fr);
+            grid-auto-rows: 2fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+            background: grey;
+            border: 1px solid white;
+            padding: 1em;
+        }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+            <li>f</li>
+            <li>g</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum et rerum labore repellat voluptatibus ut sit deserunt facilis dolorum exercitationem earum quibusdam quo itaque distinctio magnam, accusantium soluta voluptates aut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum et rerum labore repellat voluptatibus ut sit deserunt facilis dolorum exercitationem earum quibusdam quo itaque distinctio magnam, accusantium soluta voluptates aut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum et rerum labore repellat voluptatibus ut sit deserunt facilis dolorum exercitationem earum quibusdam quo itaque distinctio magnam, accusantium soluta voluptates aut.</li>
+          </ul>
+    </body>
+</html>
